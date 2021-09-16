@@ -1,34 +1,25 @@
-const root = document.getElementById('root');
+// const TextBlock = require('./TextBlock');
 
-class TextBlock extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+// const root = document.getElementById('root');
 
-  render() {
-    const {
-      articleTitle,
-      firstPar = 'забыл передать текст',
-      secondPar = 'забыл передать текст',
-      headingLevel = 1
-    } = this.props;
-    return React.createElement(
-      'article',
-      {},
-      React.createElement(`h${headingLevel}`, { }, articleTitle),
-      React.createElement('p', {}, firstPar),
-      React.createElement('p', {}, secondPar)
-    );
-  }
-}
+// const reactElem = React.createElement(TextBlock, {
+//   articleTitle: 'ЗАголовок',
+//   firstPar: 'lorem ipsum',
+//   headingLevel: 4
+// });
 
-const reactElem = React.createElement(TextBlock, {
-  articleTitle: 'ЗАголовок',
-  firstPar: 'lorem ipsum',
-  headingLevel: 4
-});
+// const reactElem1 = React.createElement(TextBlock);
+// const reactElem2 = React.createElement(TextBlock);
 
-const reactElem1 = React.createElement(TextBlock);
-const reactElem2 = React.createElement(TextBlock);
+// ReactDOM.render(reactElem, root);
 
-ReactDOM.render(reactElem, root);
+// const pow = require('./MyMath');
+import MyMath from './MyMath' // - импорт значения по умолчанию
+
+import { pow } from './MyMath'; // - импорт именнованный
+
+console.log(pow(10, 3));
+
+console.log(MyMath.div(10,2));
+
+// import MyMath, * as NonDefaultIMports from './MyMath'; - все в куче импортируем
